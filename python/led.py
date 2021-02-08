@@ -177,6 +177,8 @@ if __name__ == '__main__':
                     eprint(f'color "{key}" not recognized')
                     exit()
                 color = ColorContainer(COLORS[key])
+            if args.brightness:
+                color.brightness = args.brightness
             single_color(strip, color)
 
     except KeyboardInterrupt:
